@@ -29,7 +29,7 @@ class _RegistroState extends State<Registro> {
             ),
             Container(
               padding: EdgeInsets.all(20.0),
-              margin: EdgeInsets.only(top: 200.0),
+              margin: EdgeInsets.only(top: 20.0),
               child: TextField(
                 controller: nameController,
                 decoration: InputDecoration(
@@ -86,15 +86,16 @@ class _RegistroState extends State<Registro> {
                   });
                 },
               ),
-              Container(
-                child: RaisedButton(
-                  onPressed: () => 5 + 5,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0)),
-                  child: const Text("Sign Up"),
-                ),
-              ),
             ]),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              child: RaisedButton(
+                onPressed: () => 5 + 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0)),
+                child: const Text("Sign Up"),
+              ),
+            ),
           ],
         ),
       ),
