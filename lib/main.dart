@@ -53,7 +53,12 @@ class _InicioState extends State<Inicio> {
           Container(
             padding: EdgeInsets.all(20.0),
             child: RaisedButton(
-              onPressed: () => 5 + 5,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Registro()),
+                );
+              },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0)),
               child: const Text("Sign Up"),
