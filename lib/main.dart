@@ -1,3 +1,4 @@
+import 'package:app_integradora/log_In.dart';
 import 'package:app_integradora/sign_Up.dart';
 import 'package:flutter/material.dart';
 
@@ -10,19 +11,19 @@ class MiApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: "Mi App",
-      home: Inicio(),
+      home: Principal(),
     );
   }
 }
 
-class Inicio extends StatefulWidget {
-  const Inicio({Key? key}) : super(key: key);
+class Principal extends StatefulWidget {
+  const Principal({Key? key}) : super(key: key);
 
   @override
-  State<Inicio> createState() => _InicioState();
+  State<Principal> createState() => _PrincipalState();
 }
 
-class _InicioState extends State<Inicio> {
+class _PrincipalState extends State<Principal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +45,12 @@ class _InicioState extends State<Inicio> {
           ),
           Container(
             child: RaisedButton(
-              onPressed: () => 5 + 5,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Inicio()),
+                );
+              },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0)),
               child: const Text("Log In"),
