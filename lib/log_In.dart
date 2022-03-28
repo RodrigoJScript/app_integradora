@@ -1,3 +1,4 @@
+import 'package:app_integradora/categorias.dart';
 import 'package:flutter/material.dart';
 
 class Inicio extends StatefulWidget {
@@ -56,10 +57,15 @@ class _InicioState extends State<Inicio> {
             Container(
               padding: EdgeInsets.all(10.0),
               child: RaisedButton(
-                onPressed: () => 5 + 5,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Categorias()),
+                  );
+                },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
-                child: const Text("Sign Up"),
+                child: const Text("Log In"),
               ),
             ),
           ],
