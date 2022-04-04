@@ -1,3 +1,4 @@
+import 'package:app_integradora/buscador.dart';
 import 'package:app_integradora/main.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,12 @@ class _CategoriasState extends State<Categorias> {
                   ),
                   iconSize: 35,
                   color: Colors.black45,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Buscador()),
+                    );
+                  },
                 ),
               ),
               Container(
