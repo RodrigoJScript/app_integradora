@@ -1,3 +1,4 @@
+import 'package:app_integradora/accesorios.dart';
 import 'package:app_integradora/categorias.dart';
 import 'package:flutter/material.dart';
 
@@ -58,6 +59,7 @@ class _InicioState extends State<Inicio> {
               padding: EdgeInsets.all(10.0),
               child: RaisedButton(
                 onPressed: () {
+                  // TODO: Codigo para autenticar usuario
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => Categorias()),

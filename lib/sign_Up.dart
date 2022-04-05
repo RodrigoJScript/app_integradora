@@ -90,7 +90,10 @@ class _RegistroState extends State<Registro> {
             Container(
               padding: EdgeInsets.all(10.0),
               child: RaisedButton(
-                onPressed: () => 5 + 5,
+                onPressed: () {
+                  //TODO: Codigo para agregar nuevo usuario
+                  5 + 5;
+                },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
                 child: const Text("Sign Up"),

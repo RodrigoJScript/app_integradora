@@ -1,6 +1,8 @@
 import 'package:app_integradora/buscador.dart';
-import 'package:app_integradora/main.dart';
+import 'package:app_integradora/maquillaje.dart';
 import 'package:flutter/material.dart';
+
+import 'accesorios.dart';
 
 class Categorias extends StatefulWidget {
   const Categorias({Key? key}) : super(key: key);
@@ -82,7 +84,7 @@ class _CategoriasState extends State<Categorias> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Principal()),
+                MaterialPageRoute(builder: (context) => Maquillaje()),
               );
             },
             child: Ink.image(
@@ -106,7 +108,7 @@ class _CategoriasState extends State<Categorias> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Principal()),
+                MaterialPageRoute(builder: (context) => Accesorios()),
               );
             },
             child: Ink.image(
@@ -118,7 +120,6 @@ class _CategoriasState extends State<Categorias> {
             ),
           )),
         ),
-        BottomAppBar()
       ],
     ));
   }
