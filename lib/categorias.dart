@@ -1,8 +1,9 @@
 import 'package:app_integradora/buscador.dart';
+import 'package:app_integradora/cuenta.dart';
 import 'package:app_integradora/maquillaje.dart';
 import 'package:flutter/material.dart';
-
 import 'accesorios.dart';
+import 'main.dart';
 
 class Categorias extends StatefulWidget {
   const Categorias({Key? key}) : super(key: key);
@@ -40,7 +41,10 @@ class _CategoriasState extends State<Categorias> {
                   ),
                   iconSize: 35,
                   color: Colors.black45,
-                  onPressed: () {},
+                  onPressed: () {Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Principal()),
+                  );},
                 ),
               ),
               Container(
@@ -63,22 +67,14 @@ class _CategoriasState extends State<Categorias> {
                 padding: EdgeInsets.only(left: 40),
                 child: IconButton(
                   icon: Icon(
-                    Icons.favorite_border,
-                  ),
-                  iconSize: 35,
-                  color: Colors.black45,
-                  onPressed: () {},
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 40),
-                child: IconButton(
-                  icon: Icon(
                     Icons.account_circle_outlined,
                   ),
                   iconSize: 35,
                   color: Colors.black45,
-                  onPressed: () {},
+                  onPressed: () {Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cuenta()),
+                  );},
                 ),
               ),
             ],
