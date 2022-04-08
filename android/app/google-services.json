@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "848984786029",
+    "project_id": "app-integradora-bd540",
+    "storage_bucket": "app-integradora-bd540.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848984786029:android:c1ad13746ffc58a8bc2b64",
+        "android_client_info": {
+          "package_name": "com.rodrigojscript.app_integradora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848984786029-tcq15jgn5t45mvla2k91t6msn6erdmq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbbLIvdC6Bcy952xw5liidcYNGKhWMMEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848984786029-tcq15jgn5t45mvla2k91t6msn6erdmq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,6 +13,7 @@ class _BuscadorState extends State<Buscador> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Search"),
+        backgroundColor: Colors.lightGreen,
         actions: [
           IconButton(
             icon: Icon(Icons.search),

@@ -31,8 +31,11 @@ dependencies:
     sdk: flutter
 
 
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+  firebase_core: ^1.14.0
+  firebase_auth: ^3.3.13
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -52,15 +55,34 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
 
+  uses-material-design: true
+
+  assets:
+    - images/cuenta_logo.jpg
+    - images/logo.jpg
+    -
+  fonts:
+    - family: Perpetua
+      fonts:
+        - asset: fonts/perpeta.ttf
+
+    - family: Segoe UI
+      fonts:
+        - asset: fonts/segoeuii.ttf
+        - asset: fonts/segoeuiz.ttf
+
+    - family: Sitka
+      fonts:
+        - asset: fonts/sitka-small-599.ttf
+        - asset: fonts/sitka-small-652.ttf
+        - asset: fonts/sitka-small-815.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -1,3 +1,5 @@
+import 'package:app_integradora/log_In.dart';
+import 'package:app_integradora/main.dart';
 import 'package:flutter/material.dart';
 
 class Cuenta extends StatefulWidget {
@@ -13,15 +15,23 @@ class _CuentaState extends State<Cuenta> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          Icon(
-            Icons.account_circle_outlined,
-            size: 100.0,
+          Container(
+            margin: EdgeInsets.only(top: 200.0, right: 200.0, left: 200.0),
+            width: 200,
+            height: 200,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                fit: BoxFit.fill,
+                image: NetworkImage("images/cuenta_logo.jpg"),
+              ),
+            ),
           ),
           Text("UserName"),
           Text("Email"),
           RaisedButton(onPressed: () {
-            // TODO: Codigo para salir de la cuenta
-            5 + 5;
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Principal()));
           })
         ],
       ),
