@@ -30,6 +30,7 @@ class _CategoriasState extends State<Categorias> {
       children: <Widget>[
         Container(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
                 padding: EdgeInsets.only(left: 40),
