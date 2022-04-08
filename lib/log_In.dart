@@ -49,6 +49,11 @@ class _Inicio extends State<Inicio> {
               height: 200,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
+                boxShadow: [new BoxShadow(
+                  color: Colors.black,
+                  offset: Offset(1.0,5.0,),
+                  blurRadius: 3.0,
+                )],
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: NetworkImage("images/logo.jpg"),
@@ -56,7 +61,7 @@ class _Inicio extends State<Inicio> {
               ),
             ),
             Container(
-              child: const Text("PRESSIE"),
+              child: const Text("PRESSIE", style: TextStyle(fontFamily: "Perpetua", fontSize: 30.0),),
               padding: const EdgeInsets.all(20.0),
             ),
             Container(
@@ -64,7 +69,7 @@ class _Inicio extends State<Inicio> {
               child: TextField(
                 controller: _emailController,
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: "Email"),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(20))), labelText: "Email"),
               ),
             ),
             Container(
@@ -73,7 +78,7 @@ class _Inicio extends State<Inicio> {
                 controller: _passwordController,
                 obscureText: true,
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: "Contraseña"),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(20))), labelText: "Contraseña"),
               ),
             ),
             Container(
