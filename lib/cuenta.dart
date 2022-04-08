@@ -14,6 +14,8 @@ class _CuentaState extends State<Cuenta> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("PERFIL"),
+      backgroundColor: Colors.lightGreen,),
         body: Center(
       child: Column(
         children: <Widget>[
