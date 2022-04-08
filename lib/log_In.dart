@@ -83,14 +83,10 @@ class _Inicio extends State<Inicio> {
                   child: RaisedButton(
                     color: Color.fromRGBO(164, 255, 165, 100),
                     onPressed: () async {
-                      User? user = await loginUsingEmailPassword(
-                          email: _emailController.text.trim(),
-                          password: _passwordController.text.trim(),
-                          context: context);
-                      if (user != null) {
-                        Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(builder: (context) => Categorias()));
-                      }
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Categorias()),
+                      );
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50.0)),
