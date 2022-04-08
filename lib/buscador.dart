@@ -1,3 +1,4 @@
+import 'package:app_integradora/categorias.dart';
 import 'package:flutter/material.dart';
 
 class Buscador extends StatefulWidget {
@@ -29,13 +30,13 @@ class _BuscadorState extends State<Buscador> {
 
 class MySearchDelegate extends SearchDelegate {
   List<String> searchResults = [
-    "Art1",
-    "Cat1",
-    "Cat2",
-    "Cat3",
-    "Cat4",
-    "Cat5",
-    "Cat6"
+    "Maquillaje",
+    "Accesorios",
+    "Rimel",
+    "Collar",
+    "Aretes",
+    "BeautyBlender",
+    "Scrunchie"
   ];
 
   @override
@@ -64,14 +65,37 @@ class MySearchDelegate extends SearchDelegate {
   }
 
   @override
-  Widget buildResults(BuildContext context) => Center(
-    //TODO: Aqui es el codigo para ejecutar cuando das el tap
-      child: Text("Gidsb"),
-    );
+  Widget buildResults(BuildContext context) => Center(child: Column(
+    children: <Widget>[
+      Container(
+        padding: EdgeInsets.all(100.0),
+        child: Text("Hemos encontrado tu resultado"),
+      ),
+      Container(
+          padding: EdgeInsets.all(10.0),
+          child: SizedBox.fromSize(
+            size: Size(100.0, 50.0),
+            child: RaisedButton(
+              color: Color.fromRGBO(164, 255, 165, 100),
+              onPressed: () async {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Categorias()),
+                );
+              },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0)),
+              child: const Text(
+                "Ir ahi",
+                style: TextStyle(fontFamily: "Perpetua", fontSize: 30.0),
+              ),
+            ),
+          )),
+    ],)
+      );
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    // TODO: implementa las sugerencias de tu app
     List<String> suggestions = searchResults.where((searchResults) {
       final result = searchResults.toLowerCase();
       final input = query.toLowerCase();
